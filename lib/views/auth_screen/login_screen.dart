@@ -1,9 +1,12 @@
 import 'package:e_mart/consts/consts.dart';
 import 'package:e_mart/consts/lists.dart';
+import 'package:e_mart/views/auth_screen/signup_screen.dart';
+import 'package:e_mart/views/home_screen/home_screen.dart';
 import 'package:e_mart/widgets_common/applogo_widget.dart';
 import 'package:e_mart/widgets_common/bg_widget.dart';
 import 'package:e_mart/widgets_common/button.dart';
 import 'package:e_mart/widgets_common/custom_textfield.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -34,7 +37,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 5.heightBox,
                 button(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const HomeScreen());
+                        },
                         color: redColor,
                         textColor: whiteColor,
                         title: login)
@@ -45,7 +50,9 @@ class LoginScreen extends StatelessWidget {
                 createNewAccount.text.color(fontGrey).make(),
                 5.heightBox,
                 button(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(() => const SignupScreen());
+                        },
                         color: lightGolden,
                         textColor: redColor,
                         title: signUp)
